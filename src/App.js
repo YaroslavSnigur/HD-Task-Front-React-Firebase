@@ -4,6 +4,7 @@ import { useContext } from "react";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import { AuthContext } from "./context/AuthContext";
+import Signup from "./pages/Signup/Signup";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
           <Route
             index
             element={

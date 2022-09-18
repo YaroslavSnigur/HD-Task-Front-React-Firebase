@@ -4,6 +4,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [error, setError] = useState(false);
@@ -30,6 +31,12 @@ const Login = () => {
 
   return (
     <div className="login">
+      <div className="sign-up-link">
+        <Link to="/signup" className="sign-up-link">
+          Sign Up
+        </Link>
+      </div>
+      <div>Or</div>
       <form onSubmit={handleLogin}>
         <input
           type="email"
