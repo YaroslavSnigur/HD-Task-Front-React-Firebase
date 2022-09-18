@@ -1,14 +1,14 @@
 import { initializeApp } from "firebase/app";
-import * as dotenv from "dotenv";
-dotenv.config();
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API,
+  apiKey: "AIzaSyBm9wJWcFSOmCZXYtqLWZvPg_YJlfOmTtk",
   authDomain: "hd-frontend-task.firebaseapp.com",
   projectId: "hd-frontend-task",
   storageBucket: "hd-frontend-task.appspot.com",
-  messagingSenderId: process.env.SENDER_ID,
-  appId: process.env.APP_ID,
+  messagingSenderId: "535771740316",
+  appId: "1:535771740316:web:4cb010739aff7132f45559",
 };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth();
