@@ -20,7 +20,8 @@ const Home = () => {
   });
 
   return (
-    <div className="Home">
+    <div className="home">
+      <img src={currentUser?.photoURL} alt="" />
       <h1>{currentUser?.email}</h1>
       <button onClick={handleSignout}>Sign Out</button>
     </div>

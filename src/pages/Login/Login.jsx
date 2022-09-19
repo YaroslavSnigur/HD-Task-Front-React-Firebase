@@ -37,6 +37,8 @@ const Login = () => {
         </Link>
       </div>
       <div>Or</div>
+      <h2>Log in to your account!</h2>
+
       <form onSubmit={handleLogin}>
         <input
           type="email"
