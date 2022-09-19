@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/HD-Task-Front-React-Firebase/static/css/main.d1054ff9.css",
+    "main.js": "/HD-Task-Front-React-Firebase/static/js/main.c5e74bb3.js",
+    "static/js/787.22edae46.chunk.js": "/HD-Task-Front-React-Firebase/static/js/787.22edae46.chunk.js",
+    "index.html": "/HD-Task-Front-React-Firebase/index.html",
+    "main.d1054ff9.css.map": "/HD-Task-Front-React-Firebase/static/css/main.d1054ff9.css.map",
+    "main.c5e74bb3.js.map": "/HD-Task-Front-React-Firebase/static/js/main.c5e74bb3.js.map",
+    "787.22edae46.chunk.js.map": "/HD-Task-Front-React-Firebase/static/js/787.22edae46.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1054ff9.css",
+    "static/js/main.c5e74bb3.js"
+  ]
+}
