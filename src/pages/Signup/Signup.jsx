@@ -2,7 +2,7 @@ import "./Signup.css";
 import React, { useContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, storage, db } from "../../firebase";
-import { collection, addDoc, getDoc, doc, setDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";

@@ -13,8 +13,6 @@ function App() {
     return currentUser ? children : <Navigate to="/login" />;
   };
 
-  console.log(currentUser);
-
   return (
     <div className="App">
       <BrowserRouter>
