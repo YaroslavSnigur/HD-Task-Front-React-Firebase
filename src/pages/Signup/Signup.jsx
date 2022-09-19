@@ -11,7 +11,9 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   const [error, setError] = useState(false);
   const [file, setFile] = useState("");
-  const [fileUrl, setFileUrl] = useState("");
+  const [fileUrl, setFileUrl] = useState(
+    "https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg"
+  );
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -59,11 +61,13 @@ const Signup = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = { ...userCredential.user, photoURL: fileUrl };
-        console.log(user);
         dispatch({ type: "SIGNUP", payload: user });
+        addDoc(collection(db, "users"), {
+          user: userCredential.user.uid,
+          url: fileUrl,
+        });
         navigate("/");
       })
-      .then((userCredential) => {})
       .catch((error) => {
         setError(true);
         console.log(error);
@@ -80,11 +84,12 @@ const Signup = () => {
       <div>Or</div>
       <h2>Create new user!</h2>
       <form onSubmit={handleSignUp}>
-        <img
-          src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg"
-          alt=""
+        <img src={fileUrl} alt="" />
+        <input
+          type="file"
+          accept="image/png, image/gif, image/jpeg"
+          onChange={(e) => setFile(e.target.files[0])}
         />
-        <input type="file" onChange={(e) => setFile(e.target.files[0])} />
         <input
           type="email"
           placeholder="email"
